@@ -1,3 +1,6 @@
+# Misc
+*.exe
+
 # VSCode
 .vscode/*
 quizlets/*
