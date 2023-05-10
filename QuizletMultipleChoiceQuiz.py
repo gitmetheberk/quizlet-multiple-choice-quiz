@@ -4,8 +4,6 @@ import os
 
 ALPHABET = "abcdefghijklmnopqrstuvwxyz"
 QUIZLETS_DIRECTORY = "quizlets"
-termsAndDefinitions = {}
-
 
 def readQuizFile(filepath):
     with open(filepath) as file:
