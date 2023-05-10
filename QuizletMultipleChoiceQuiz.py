@@ -23,6 +23,11 @@ def readQuizFile(filepath):
     return quizItems
 
 
+def createQuizletsDirectoryIfNotExists(path: str):
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+
 def chooseQuizFile() -> str:
     files = os.listdir(QUIZLETS_DIRECTORY)
 
@@ -132,6 +137,8 @@ def quiz(termsAndDefinitions: dict) -> None:
 
 def main():
     global termsAndDefinitions
+
+    createQuizletsDirectoryIfNotExists(QUIZLETS_DIRECTORY)
 
     termsAndDefinitions = {}
     while len(termsAndDefinitions) == 0:
